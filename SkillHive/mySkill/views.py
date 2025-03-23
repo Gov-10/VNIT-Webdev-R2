@@ -13,7 +13,8 @@ def event_list(request):
     events = Event.objects.all()
     return render(request, 'event_list.html', {'events': events})
 
-
+def contact_us(request):
+    return render(request, 'contact_us.html')
 
 
 # Create your views here.
