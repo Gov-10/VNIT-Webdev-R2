@@ -27,9 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['vnit-webdev-r2-production.up.railway.app']
 
+CORS_ALLOW_ALL_ORIGINS = True  # Don't use in production!
 
-# Application definition
-
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://vnit-webdev-r2-production.up.railway.app",
+]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
